@@ -1,0 +1,10 @@
+xArr =[]
+yArr=[]
+for i in range(4):
+    xy = input()
+    xy = xy.strip('(').strip(')')
+    xy = (list(map(int, xy.split())))
+    xArr.append(xy[0])
+    yArr.append(xy[1])
+area = (max(xArr) - min(xArr)) * (max(yArr) - min(yArr))
+print("area:", area)
