@@ -1,0 +1,10 @@
+  const strArr = ["(0 0)", "(3 0)", "(0 2)", "(3 2)"];
+
+  function ArrayChallenge(strArr) {
+    const value = strArr.map((s) => s.match(/-?\d+/g).map(Number));
+    const x = value.map(([x]) => x);
+    const y = value.map(([, y]) => y);
+    const maxX = Math.abs(Math.min(...x) - Math.max(...x));
+    const maxY = Math.abs(Math.min(...y) - Math.max(...y));
+    _logger(maxX * maxY);
+  }
